@@ -1082,6 +1082,36 @@ body {
 }
 .ha-info .ha-name { font-size: 13px; font-weight: 700; }
 .ha-info .ha-role { font-size: 11px; color: var(--accent-green); }
+
+/* ===================== MOBILE RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 20px;
+  }
+  .info-panel {
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    flex-shrink: unset;
+  }
+  .phone-frame {
+    width: 100%;
+    max-width: 375px;
+    height: 812px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .phone-frame {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 375 / 812;
+  }
+}
 </style>
 </head>
 <body>
