@@ -1098,18 +1098,22 @@ body {
     flex-shrink: unset;
   }
   .phone-frame {
-    width: 100%;
+    width: calc(100vw - 32px);
     max-width: 375px;
-    height: 812px;
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 390px) {
-  .phone-frame {
-    max-width: 100%;
     height: auto;
     aspect-ratio: 375 / 812;
+    flex-shrink: 0;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .phone-frame .notch,
+  .phone-frame .home-indicator {
+    display: none;
+  }
+  .phone-frame .viewport {
+    border-radius: 0;
   }
 }
 </style>
